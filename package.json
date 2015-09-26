@@ -1,0 +1,23 @@
+{
+  "name": "custom-element-decorators",
+  "version": "1.0.0",
+  "description": "ES 7 decorators for custom HTML elements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify ./spec/runner.js -t [ babelify --stage 0 ] | browser-run | faucet"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rivets": "^0.8.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browser-run": "^2.6.0",
+    "document-register-element": "^0.4.5",
+    "faucet": "0.0.1",
+    "tape": "^4.2.0",
+    "tape-catch": "^1.0.4"
+  }
+}
