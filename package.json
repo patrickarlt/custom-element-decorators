@@ -6,8 +6,13 @@
   "scripts": {
     "test": "browserify ./spec/runner.js -t [ babelify --stage 0 ] | browser-run | faucet"
   },
-  "author": "",
+  "author": "Patrick Arlt",
   "license": "ISC",
+  "browserify": {
+  "transform": [
+      [ "babelify", { "stage": 0 } ]
+    ]
+  },
   "dependencies": {
     "rivets": "^0.8.1"
   },
