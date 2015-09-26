@@ -118,7 +118,7 @@ export default document.registerElement('my-element', MyElement);
 
 The `@watchAttribute` decorator takes the name of the attribute you want to watch as the first parameter and either an anonymous function or name of a function on your class as the second. The value of `this` in your function will be bound to the instance of the element.
 
-## `bindEvent`
+## `@bindEvent`
 
 Listening for events on custom elements is a common task that can be easily handled with the `@bindEvent` decorator which will automatically bind and unbind listeners when the element is added and remove from the DOM.
 
