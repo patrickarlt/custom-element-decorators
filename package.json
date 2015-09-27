@@ -1,13 +1,8 @@
 {
   "name": "custom-element-decorators",
-  "version": "1.0.0",
   "description": "ES 7 decorators for custom HTML elements.",
-  "main": "index.js",
-  "scripts": {
-    "test": "semistandard src && browserify ./spec/runner.js -t [ babelify --stage 0 ] | browser-run | faucet"
-  },
+  "version": "1.0.0",
   "author": "Patrick Arlt <patrick.arlt@gmail.com>",
-  "license": "ISC",
   "browserify": {
     "transform": [
       [
@@ -17,6 +12,9 @@
         }
       ]
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/patrickarlt/custom-element-decorators/issues"
   },
   "dependencies": {
     "rivets": "^0.8.1"
@@ -32,11 +30,21 @@
     "tape": "^4.2.0",
     "tape-catch": "^1.0.4"
   },
-  "bugs": {
-    "url": "https://github.com/patrickarlt/custom-element-decorators/issues"
-  },
+  "homepage": "https://github.com/patrickarlt/custom-element-decorators",
+  "keywords": [
+    "custom elements",
+    "decorators",
+    "es 7",
+    "es7",
+    "web components"
+  ],
+  "license": "ISC",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/patrickarlt/custom-element-decorators.git"
+  },
+  "scripts": {
+    "test": "semistandard src && browserify ./spec/runner.js -t [ babelify --stage 0 ] | browser-run | faucet"
   }
 }
