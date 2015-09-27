@@ -22,7 +22,7 @@ test('should listen for an event on the element with a passed function', functio
 
   setTimeout(function () {
     fireEvent(element, 'test');
-  });
+  }, 10);
 });
 
 test('should listen for an event on the element with a handler', function (t) {
@@ -42,7 +42,7 @@ test('should listen for an event on the element with a handler', function (t) {
 
   setTimeout(function () {
     fireEvent(element, 'test');
-  });
+  }, 10);
 });
 
 test('should listen for a bubbled event on the element with a handler', function (t) {
@@ -67,5 +67,5 @@ test('should listen for a bubbled event on the element with a handler', function
 
   setTimeout(function () {
     element.input.focus();
-  });
+  }, 10);
 });
