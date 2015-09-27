@@ -26,6 +26,7 @@
     "browserify": "^11.2.0",
     "document-register-element": "^0.4.5",
     "faucet": "0.0.1",
+    "gh-release": "^2.0.1",
     "semistandard": "*",
     "tape": "^4.2.0",
     "tape-catch": "^1.0.4"
@@ -45,6 +46,7 @@
     "url": "https://github.com/patrickarlt/custom-element-decorators.git"
   },
   "scripts": {
-    "test": "semistandard src && browserify ./spec/runner.js -t [ babelify --stage 0 ] | browser-run | faucet"
+    "test": "semistandard src && browserify ./spec/runner.js -t [ babelify --stage 0 ] | browser-run | faucet",
+    "release": "gh-release"
   }
 }
