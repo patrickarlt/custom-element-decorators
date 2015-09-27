@@ -1,5 +1,13 @@
 # ES 7 Decorators for Custom Elements
 
+[![npm][npm-image]][npm-url]
+[![travis][travis-image]][travis-url]
+
+[npm-image]: https://img.shields.io/npm/v/custom-element-decorators.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/custom-element-decorators
+[travis-image]: https://img.shields.io/travis/patrickarlt/custom-element-decorators.svg?style=flat-square
+[travis-url]: https://travis-ci.org/patrickarlt/custom-element-decorators
+
 [Custom Elements](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/) are one of the most exciting new specifications to come out in the last few years. But they often contain lots of boilerplate code for setting up templates, events, attributes, ect...
 
 Enter [ES 7 Decorators](https://github.com/wycats/javascript-decorators) which can be used to quickly setup all this boilerplate code.
@@ -9,7 +17,8 @@ import {
   attribute,
   watchAttribute,
   bindEvent,
-  rivetsTemplate} from 'custom-element-decorators';
+  rivetsTemplate
+} from 'custom-element-decorators';
 
 @attribute('name', 'String')
 @attribute('disabled', 'Boolean')
@@ -166,3 +175,11 @@ export default document.registerElement('my-element', MyElement);
 The `@rivetsTemplate` decorator takes a template string as its first argument and optionally any [Rivets configuration](http://rivetsjs.com/docs/guide/#usage-configuring) as the second argument.
 
 Your custom element is bound as the data source for the template do you can interpolate and bind any property on your element (not just attributes) and use any part of the [Rivets JS](http://rivetsjs.com/)
+
+## Contributing
+
+Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
+
+## License
+
+[ISC](LICENSE)
