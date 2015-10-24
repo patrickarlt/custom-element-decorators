@@ -19,6 +19,11 @@
   "dependencies": {
     "rivets": "^0.8.1"
   },
+  "jspm": {
+    "registry": "npm",
+    "format": "es6"
+  },
+  "jsnext:main": "index.js",
   "devDependencies": {
     "babel": "^5.8.23",
     "babelify": "^6.3.0",
