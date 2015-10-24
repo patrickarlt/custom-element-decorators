@@ -92,7 +92,7 @@ export default document.registerElement('my-element', MyElement);
 
 You can access all of your `@attribute` declarations as plain properties with custom getters and setter just like regular HTML elements. This makes property binding in frameworks like Aurelia easier.
 
-Since there are no Boolean attributes in HTML (all attributes are strings) the following strings are considered `false`:
+Since there are no boolean attributes in HTML (all attributes are strings) the following strings are considered `false`:
 
 * `'false'`
 * `'undefined'`
