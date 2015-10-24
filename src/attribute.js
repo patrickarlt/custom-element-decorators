@@ -1,5 +1,5 @@
 function stringToBool (string) {
-  if(string === 'false' || string === 'undefined' || string === 'null' || string === '0' || string.length === 0) {
+  if(string === 'false' || string === 'undefined' || string === 'null' || string === '0') {
     return false;
   }
 
@@ -34,7 +34,7 @@ function setter (name, type) {
   switch (type) {
     case 'Boolean':
       return function (value) {
-        this.setAttribute(name, value + '');
+        (!!value) ? this.setAttribute(name, value + '') : this.removeAttribute(name);
       };
     case 'Date':
       return function (value) {
