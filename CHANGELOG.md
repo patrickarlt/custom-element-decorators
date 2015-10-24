@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-* Setting the following strings on boolean attributes will not result in a falsey value, `'false'`, `'null'`, `undefined`.
+* Setting the following strings on boolean attributes will not result in a falsey value, `'false'`, `'null'`, `undefined` and `'0'`.
 
 ## [1.0.0](1.0.0) - 2015-09-12
 
