@@ -27,7 +27,7 @@
     "document-register-element": "^0.4.5",
     "faucet": "0.0.1",
     "gh-release": "^2.0.1",
-    "semistandard": "*",
+    "semistandard": "^7.0.2",
     "tape": "^4.2.0",
     "tape-catch": "^1.0.4"
   },

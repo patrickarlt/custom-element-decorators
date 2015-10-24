@@ -1,8 +1,19 @@
+function stringToBool (string) {
+  if(string === 'false' || string === 'undefined' || string === 'null' || string === '0' || string.length === 0) {
+    return false;
+  }
+
+  return true;
+}
+
 function getter (name, type) {
   switch (type) {
     case 'Boolean':
       return function () {
-        return this.hasAttribute(name) || false;
+        if(!this.hasAttribute('name')){
+          return false;
+        }
+        return stringToBool(this.getAttribute(name));
       };
     case 'Number':
       return function () {
@@ -23,7 +34,7 @@ function setter (name, type) {
   switch (type) {
     case 'Boolean':
       return function (value) {
-        (value) ? this.setAttribute(name, name) : this.removeAttribute(name);
+        this.setAttribute(name, value + '');
       };
     case 'Date':
       return function (value) {
