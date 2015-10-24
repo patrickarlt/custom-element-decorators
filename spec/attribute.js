@@ -49,6 +49,45 @@ test('should get and set a boolean attribute', function (t) {
   t.equal(element.active, false);
 })
 
+test('empty string should be truthy for boolean attributes', function (t) {
+  t.plan(1);
+
+  @attribute('active', 'Boolean')
+  class MockElement extends HTMLElement {}
+
+  let Mock = document.registerElement('mock-element-bool-attr-empty-string', MockElement);
+  let element = new Mock();
+
+  element.setAttribute('active', '');
+  t.equal(element.active, true);
+})
+
+test('falsey strings should be false for boolean attributes', function (t) {
+  t.plan(4);
+
+  @attribute('active', 'Boolean')
+  class MockElement extends HTMLElement {}
+
+  let Mock = document.registerElement('mock-element-bool-attr-falsey-strings', MockElement);
+  let element = new Mock();
+
+  element.active = true;
+  element.setAttribute('active', undefined);
+  t.equal(element.active, false);
+
+  element.active = true;
+  element.setAttribute('active', null);
+  t.equal(element.active, false);
+
+  element.active = true;
+  element.setAttribute('active', false);
+  t.equal(element.active, false);
+
+  element.active = true;
+  element.setAttribute('active', 0);
+  t.equal(element.active, false);
+})
+
 test('should get and set a date attribute', function (t) {
   t.plan(2);
 

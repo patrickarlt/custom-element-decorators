@@ -10,7 +10,7 @@ function getter (name, type) {
   switch (type) {
     case 'Boolean':
       return function () {
-        if(!this.hasAttribute('name')){
+        if(!this.hasAttribute(name)){
           return false;
         }
         return stringToBool(this.getAttribute(name));
